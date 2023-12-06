@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Planetary Motion Simulator</title>
+        <meta content="width=device-width,initial-scale=1" name="viewport"/>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -18,31 +19,37 @@
                 margin-top: 10px;
                 background-color: #000000;
             }
+            .footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 5px;
+                background: black;
+            }
         </style>
     </head>
     <body>
         <h1>Global Music of the Spheres</h1>
         <br>
-        <div class="flex-row">
-            <canvas id="simulationCanvas" width="1000" height="1000"></canvas>
-	        <div>
-                <label for="presets">Scale preset:</label>
-                <select id="presets" oninput="usePreset()">
-                    <option value="">Please Select</option>
-                    <option value="1/1 293/261 329/293 349/329 392/349 440/392 494/440">Western</option>
-                    <option value="1/1 6/5 5/4 4/3 3/2 2/1">Slendro (Javanese Gamelan)</option>
-                    <option value="1/1 7/6 5/4 4/3 7/4 3/2 7/5 2/1">Pelog (Balinese Gamelan)</option>
-                    <option value="1/1 9/8 5/4 4/3 3/2 5/3 15/8 2/1">P'yŏngjo (Korean music)</option>
-                    <option value="1/1 9/8 6/5 5/4 4/3 3/2 8/5 2/1">Ujo (Korean music)</option>
-                    <option value="1/1 9/8 5/4 3/2 5/3 2/1">African Pentatonic Scale</option>
-                    <option value="1/1 9/8 5/4 11/9 3/2 27/16 7/4 2/1">Dastgah (Persian music)</option>
-                    <option value="1/1 9/8 5/4 4/3 3/2 5/3 15/8 2/1">Byzantine Chant Scales</option>
-                    <option value="1/1 9/8 5/4 4/3 3/2 8/5 5/3 2/1">Ancient Greek Tetrachordal Scales</option>
-                </select>
-             	<div id="planetSettings"></div>
-            </div>
+        <div>
+            <label for="presets">Scale preset:</label>
+            <select id="presets" oninput="usePreset()">
+                <option value="">Please Select</option>
+                <option value="1/1 293/261 329/293 349/329 392/349 440/392 494/440">Western</option>
+                <option value="1/1 6/5 5/4 4/3 3/2 2/1">Slendro (Javanese Gamelan)</option>
+                <option value="1/1 7/6 5/4 4/3 7/4 3/2 7/5 2/1">Pelog (Balinese Gamelan)</option>
+                <option value="1/1 9/8 5/4 4/3 3/2 5/3 15/8 2/1">P'yŏngjo (Korean music)</option>
+                <option value="1/1 9/8 6/5 5/4 4/3 3/2 8/5 2/1">Ujo (Korean music)</option>
+                <option value="1/1 9/8 5/4 3/2 5/3 2/1">African Pentatonic Scale</option>
+                <option value="1/1 9/8 5/4 11/9 3/2 27/16 7/4 2/1">Dastgah (Persian music)</option>
+                <option value="1/1 9/8 5/4 4/3 3/2 5/3 15/8 2/1">Byzantine Chant Scales</option>
+                <option value="1/1 9/8 5/4 4/3 3/2 8/5 5/3 2/1">Ancient Greek Tetrachordal Scales</option>
+            </select>
+            <div id="planetSettings"></div>
         </div>
-        <div>made as part of <a href="https://za3k.com/hackaday">hack-a-day</a> by nsh and za3k. source code available <a href="https://github.com/za3k/ha3k-30-musicofspheres">on github</a></div>
+        <canvas id="simulationCanvas" width="1000" height="1000"></canvas>
+        <div class="footer">made as part of <a href="https://za3k.com/hackaday">hack-a-day</a> by nsh and za3k. source code available <a href="https://github.com/za3k/ha3k-30-musicofspheres">on github</a></div>
     </body>
 
     <script src="simulation.js"></script>
