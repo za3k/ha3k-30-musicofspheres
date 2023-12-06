@@ -130,7 +130,7 @@ function playTone(frequency, ms) {
     const gainNode = audioContext.createGain();
     // Set the frequency (pitch) of the tone
     oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
-    gainNode.gain.setValueAtTime(0.005, audioContext.currentTime); // Adjust the volume here (0.0 to 1.0)
+    gainNode.gain.setValueAtTime(0.05, audioContext.currentTime); // Adjust the volume here (0.0 to 1.0)
 
     // Connect the oscillator to the gain node, and the gain node to the audio context's destination
     oscillator.connect(gainNode);
